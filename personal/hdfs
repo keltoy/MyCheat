@@ -1,0 +1,12 @@
+---
+syntax: bash
+tags: [ hadoop, hdfs ]
+---
+# To list all files in the current directory:
+hdfs --cluster {hadoop-cluster} dfs -ls {directory} 
+
+# To download files in the current directory:
+hdfs --cluster {hadoop-cluster} dfs -get {directory} 
+
+# To upload files in hdfs
+hdfs --cluster {hadoop-cluster} dfs -put {file} {directory}
