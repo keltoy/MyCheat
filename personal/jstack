@@ -1,0 +1,11 @@
+---
+syntax: bash
+tags: [ java, jstack ]
+---
+# output long list of threads
+jstack -l pid
+
+# output force long list of threads in mix mode
+jstack -F -m -l pid
+
+

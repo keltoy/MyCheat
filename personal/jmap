@@ -1,0 +1,21 @@
+---
+syntax: bash
+tags: [ java, jmap ]
+---
+# output the memory image information for the process
+jmap pid
+
+# output java heap detail info
+jmap -heap pid
+
+# output stats of objects of heap
+jmap -histo:live pid
+
+# output class loader info
+jmap -clstats pid
+
+# output watting terminated objects info
+jmap -finalizerinfo pid
+
+# generate dumps snapshot
+jmap -dump:format=b,file=heapdump.phrof pid

@@ -1,0 +1,6 @@
+---
+syntax: bash
+tags: [ hadoop ]
+---
+# to see the quota of path
+hadoop --cluster {hadoop-cluster} fs -quata {directory}
