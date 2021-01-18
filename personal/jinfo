@@ -1,0 +1,7 @@
+---
+syntax: bash
+tags: [ java, jinfo ]
+---
+
+# 查看java进程信息
+jinfo id

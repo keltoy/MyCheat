@@ -5,6 +5,9 @@ tags: [ java, jps ]
 # jps generation
 jps [options] [hostid]
 
+# 显示 当前 java 进程的主类或者jar包，JVM的参数 和 主方法的参数
+jps -lmv
+
 # not output the classname jar name and parameters for main method
 jps -q
 
