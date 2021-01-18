@@ -1,0 +1,39 @@
+---
+syntax: bash
+tags: [ java, jstat ]
+---
+
+# 每1秒 打印一次 打印1000次
+jstat -gc id 1000 1000
+
+# -gcutil 输出结果
+- S0: 0号存活区的百分比使用率
+- S1: 1号存活区的百分比使用率
+- E: Eden区 百分比使用率
+- O: Old 老年代 百分比使用率
+- M: meta 元空间 百分比使用率
+- CCS: 压缩class空间 百分比使用率
+- YGC: 年轻代GC 的次数
+- YGCT: 年轻代GC 消耗总时间
+- FGC: FullGC 的次数
+- FGCT: FullGC 消耗总时间
+- GCT: YGC + FGC 消耗总时间
+
+# -gc 输出结果
+- S0C: 0号存活区的当前容量，单位kb
+- S1C: 1号存活区的当前容量，单位kb
+- S0U: 0号存活区的当前使用量，单位kb
+- S1U: 1号存活区的当前使用量，单位kb
+- EC: Eden区 当前容量，单位kb
+- EU: Eden区 当前使用量，单位kb
+- OC: Old老年代 当前容量，单位kb
+- OU: Old老年代 当前使用量，单位kb
+- MC: meta元空间 当前容量，单位kb
+- MU: meta元空间 当前使用量，单位kb
+- CCSC: 压缩class空间 当前容量，单位kb
+- CCSU: 压缩class空间 当前使用量，单位kb
+- YGC: 年轻代GC 的次数
+- YGCT: 年轻代GC 消耗总时间
+- FGC: FullGC 的次数
+- FGCT: FullGC 消耗总时间
+- GCT: YGC + FGC 消耗总时间
