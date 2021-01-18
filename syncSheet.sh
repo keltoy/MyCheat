@@ -19,12 +19,14 @@ SYNC=$CURRENT_DIR/personal
 echo "sync from $PERSONAL_DIR to $SYNC"
 
 
-for sheet in $PERSONAL_DIR
+for sheet in $PERSONAL_DIR/*
 do
-  if [ ! -e $sheet ];
+  file=${sheet##*/}
+  echo "check $file"
+  if [ ! -e $SYNC/$file ];
   then 
     echo "$sheet need sync"
-    cp -r $PERSONAL_DIR/$sheet $SYNC/
+    cp -r $sheet $SYNC/
   fi
 done
 
