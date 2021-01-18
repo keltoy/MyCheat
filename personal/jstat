@@ -3,8 +3,8 @@ syntax: bash
 tags: [ java, jstat ]
 ---
 
-# 每1秒 打印一次 打印1000次
-jstat -gc id 1000 1000
+# 每1秒 打印一次 打印2000次
+jstat -gc id 1000 2000
 
 # -gcutil 输出结果
 - S0: 0号存活区的百分比使用率

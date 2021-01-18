@@ -27,6 +27,13 @@ do
   then 
     echo "$sheet need sync"
     cp -r $sheet $SYNC/
+  else 
+    s=`cmp --silent $sheet $SYNC/$file && echo 0 || echo 1`
+    if [ $s = 1 ]
+    then 
+      echo "$file need update"
+      cp -r $sheet $SYNC/
+    fi 
   fi
 done
 
